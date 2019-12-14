@@ -2692,7 +2692,7 @@
 
       var fields = $('.shop2-filter-fields'),
         cookieName = 'filter_opened',
-        opened = readCookie(cookieName),
+        opened = null,
         btn = $('.shop2-toggle-fields');
 
       btn.on('click', function() {
@@ -3263,6 +3263,7 @@
     auth: function() {
 
       $(document).on('click', '.js-shop2-cart-auth__expand', function(e) {
+        console.log('asdasd')
         e.preventDefault();
         $('.js-shop2-cart-auth__form').toggle();
       });

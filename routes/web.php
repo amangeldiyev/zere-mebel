@@ -10,12 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('index');
-});
-
-
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+Route::get('/', 'HomeController@index');
+Route::get('/product/{slug}', 'HomeController@product')->name('product');
+Route::post('/product/{id}/attribute', 'VoyagerProductsController@addAttribute')->name('attribute.add');
+Route::get('/attribute/delete/{id}', 'VoyagerProductsController@deleteAttribute')->name('attribute.delete');
+Route::get('/{category}/{subcategory?}', 'HomeController@category')->name('category');

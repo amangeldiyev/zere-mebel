@@ -2143,7 +2143,7 @@ table.shop2-product-options tr.odd {
   cursor: pointer; }
 
 .shop2-preloader {
-  background: url('../shop2v2/default/images/preloader.gif') 50% 50% no-repeat;
+  background: url('../images/preloader.gif') 50% 50% no-repeat;
   position: absolute;
   display: none; }
 

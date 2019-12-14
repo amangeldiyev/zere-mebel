@@ -1,0 +1,51 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Product;
+use App\Category;
+use App\Subcategory;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\View;
+
+class HomeController extends Controller
+{
+    public function __construct() {
+
+        $categories = Category::with('subcategories')->get();
+
+        View::share('categories', $categories);
+    }
+
+    public function index() {
+        
+        $on_sale_products = Product::whereNotNull('sale_price')->get();
+
+        $new_products = Product::where('new', 1)->get();
+        
+        return view('index', compact('on_sale_products', 'new_products'));
+    }
+
+
+    public function category(Category $category, Subcategory $subcategory = null) {
+
+        if($subcategory) {
+            $products = $subcategory->products;
+            $title = $subcategory->name;
+            $desc = $subcategory->desc;
+        } else {
+            $products = $category->products;
+            $title = $category->name;
+            $desc = $category->desc;
+        }
+
+        return view('category', compact('category', 'subcategory', 'products', 'title', 'desc'));
+    }
+
+    public function product($slug) {
+
+        $product = Product::where('slug', $slug)->with('category', 'subcategory', 'attributes')->firstOrFail();
+
+        return view('product', compact('product'));
+    }
+}
