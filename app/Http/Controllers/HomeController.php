@@ -29,17 +29,37 @@ class HomeController extends Controller
 
     public function category(Category $category, Subcategory $subcategory = null) {
 
+        $filter = request('s');
+        $selected_size = 'all';
+
         if($subcategory) {
-            $products = $subcategory->products;
+            $products = $subcategory->products();
             $title = $subcategory->name;
             $desc = $subcategory->desc;
         } else {
-            $products = $category->products;
+            $products = $category->products();
             $title = $category->name;
             $desc = $category->desc;
         }
+        
+        if(isset($filter['price'])) {
+            $products->where('price', '>', $filter['price']['min'])->where('price', '<', $filter['price']['max']);
+        }
 
-        return view('category', compact('category', 'subcategory', 'products', 'title', 'desc'));
+        if($filter['size'] && $filter['size'] != 'all') {
+            $products->where('size', $filter['size']);
+            $selected_size = $filter['size'];
+        }
+
+        if(isset($filter['sort_by'])) {
+            $products->orderByRaw($filter['sort_by']);
+        }
+
+        $products = $products->get();
+
+        $sizes = Product::distinct('size')->get()->pluck('size');
+        
+        return view('category', compact('category', 'subcategory', 'products', 'sizes', 'selected_size', 'title', 'desc'));
     }
 
     public function product($slug) {
