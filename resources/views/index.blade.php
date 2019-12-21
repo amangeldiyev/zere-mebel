@@ -64,7 +64,7 @@
                             <div class="product-top">
                                 <div class="product-image">
                                     <a href="{{ route('product', ['product' => $product->slug]) }}">
-                                        <img src="/storage/{{$product->img}}" alt="{{$product->title}}" title="{{$product->title}}" />
+                                        <img src="/storage/{{json_decode($product->img)[0]}}" alt="{{$product->title}}" title="{{$product->title}}" />
                                         <div class="product-label">
                                             <div class="product-spec">Распродажа</div>
                                             @if ($product->new)
@@ -122,7 +122,7 @@
                             <div class="product-top">
                                 <div class="product-image">
                                     <a href="{{ route('product', ['product' => $product->slug]) }}">
-                                        <img src="/storage/{{$product->img}}" alt="{{$product->title}}" title="{{$product->title}}" />
+                                        <img src="/storage/{{json_decode($product->img)[0]}}" alt="{{$product->title}}" title="{{$product->title}}" />
                                         <div class="product-label">
                                             <div class="product-new">New</div>
                                         </div>

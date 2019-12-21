@@ -69,8 +69,8 @@
                 </div>
                 <div class="view-shop">
                     <strong>Вид:</strong>
-                    <a href="#" title="Витрина" data-value="thumbs" class="shop2-btn thumbs  active-view"><span>&nbsp;</span></a>
-                    <a href="#" title="Список" data-value="simple" class="shop2-btn simple "><span>&nbsp;</span></a>
+                    <a href="#" title="Витрина" data-value="thumbs" class="shop2-btn thumbs {{request('view') == 'simple' ? '' : 'active-view'}}"><span>&nbsp;</span></a>
+                    <a href="#" title="Список" data-value="simple" class="shop2-btn simple {{request('view') == 'simple' ? 'active-view' : ''}}"><span>&nbsp;</span></a>
                 </div>
                 <div class="products-per-page-wr">
                     <span class="products-per-page-title">на странице:</span>
@@ -164,77 +164,18 @@
                 <div class="close-filter"></div>
             </form><!-- Filter -->
 
-            <div class="product-list product-list-thumbs list-thumb clear-self">
+            <div class="product-list">
 
-                @foreach ($products as $product)
-                <form method="post" action="" accept-charset="utf-8" class="shop2-product-item product-item-thumb">
-                    <div class="product-item-in">
-                        <div class="product-top">
-                            <div class="product-image">
-                                <a href="{{ route('product', ['product' => $product->slug]) }}">
-                                    <img src="/storage/{{$product->img}}" alt="{{$product->title}}" title="{{$product->title}}" />
-                                    @if ($product->new)
-                                    <div class="product-label">
-                                        <div class="product-new">New</div>
-                                    </div>
-                                    @endif
-                                </a>
-                                <div class="verticalMiddle"></div>
-                            </div>
+                @if (request('view') == 'simple')
+                    @include('layouts.list')
+                @else
+                    @include('layouts.grid')
+                @endif
 
-                            <div class="tpl-stars tpl-active">
-                                <div class="tpl-rating" style="width: 0%;"></div>
-                            </div><span class="rat-count">(0)</span>
-
-                            <div class="product-name">
-                                <a href="{{ route('product', ['product' => $product->slug]) }}">{{$product->title}}</a>
-                            </div>
-
-                            {{-- <div class="product-article"><span>Артикул:</span> кд-32</div> --}}
-
-                        </div>
-                        <div class="product-bot">
-                            <div class="product-price">
-
-                                <div class="price-current ">
-                                    <strong>{{$product->sale_price ?? $product->price}}</strong> тг. 
-                                </div>
-                            </div>
-
-                            <div class="product-amount-buy">
-                                {{-- <div class="product-amount">
-                                    <div class="amount-title">Количество:</div>
-                                    <div class="shop2-product-amount">
-                                        <button type="button" class="amount-minus">&#8722;</button><input type="text" name="amount" data-min="1" data-multiplicity="1" maxlength="4" value="1" /><button type="button" class="amount-plus">&#43;</button>
-                                    </div>
-                                </div>
-
-                                <button class="shop2-product-btn type-2 buy" type="submit">
-                                    <span>В Корзину</span>
-                                </button> --}}
-
-                            </div>
-                        </div>
-                    </div>
-                </form>
-                @endforeach
                 
             </div>
 
-            <ul class="shop2-pagelist">
-
-
-
-                <li class="page-num active-num"><span>1</span></li>
-                <li class="page-num"><a href="divany/p/1.html">2</a></li>
-                <li class="page-num"><a href="divany/p/2.html">3</a></li>
-                <li class="page-num"><a href="divany/p/3.html">4</a></li>
-
-
-                <li class="page-next"><a href="divany/p/1.html">&nbsp;</a></li>
-                <li class="page-last"><a href="divany/p/3.html">&nbsp;</a></li>
-
-            </ul>
+            {{ $products->appends($_GET)->links('layouts.pagination') }}
 
         </div>
     </main>

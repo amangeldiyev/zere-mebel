@@ -37,24 +37,15 @@
                                     </div>
                                     <div class="product-thumbnails special-block-in frame">
                                         <ul class="thumbnails-in special-block1 product-list-thumbs clear-self">
+                                            @foreach (json_decode($product->img) as $key => $img)
+                                            @if ($key != 0)
                                             <li>
-                                                <a class="light_gallery2" href="/storage/{{$product->img}}">
-                                                    <img src="/storage/{{$product->img}}" alt="Банкетка Георг" title="Банкетка Георг" />
+                                                <a class="light_gallery2" href="/storage/{{$img}}">
+                                                    <img src="/storage/{{$img}}" alt="Банкетка Георг" title="Банкетка Георг" />
                                                 </a>
                                             </li>
-                                            <li>
-                                                <a class="light_gallery2" href="/images/default.png">
-                                                    <img src="/images/default.png" alt="Банкетка Георг" title="Банкетка Георг" />
-                                                </a>
-                                                <div class="verticalMiddle"></div>
-                                            </li>
-                                            <li>
-                                                <a class="light_gallery2" href="/images/default.png">
-                                                    <img src="/images/default.png" alt="Банкетка Георг" title="Банкетка Георг" />
-                                                </a>
-                                                <div class="verticalMiddle"></div>
-                                            </li>
-
+                                            @endif
+                                            @endforeach
                                         </ul>
                                     </div>
                                     <div class="prevPage"></div>
@@ -64,19 +55,17 @@
                             </div>
                             <div class="product-image">
 
-                                <a class="light_gallery_opener" href="#">
-                                    <img src="/storage/{{$product->img}}" alt="Банкетка Георг" title="Банкетка Георг" />
+                                <a class="light_gallery_opener" href="/storage/{{json_decode($product->img)[0]}}">
+                                    <img src="/storage/{{json_decode($product->img)[0]}}" alt="Банкетка Георг" title="Банкетка Георг" />
                                 </a>
                                 <div style="display: none;">
+                                    @foreach (json_decode($product->img) as $key => $img)
+                                    @if ($key != 0)
                                     <a class="light_gallery" href="#">
-                                        <img src="/images/default.png" alt="Банкетка Георг" title="Банкетка Георг" />
+                                        <img src="/storage/{{$img}}" alt="Банкетка Георг" title="Банкетка Георг" />
                                     </a>
-                                    <a href="#" class="light_gallery">
-                                        <img src="/images/default.png" alt="Банкетка Георг" title="Банкетка Георг" />
-                                    </a>
-                                    <a href="#" class="light_gallery">
-                                        <img src="/images/default.png" alt="Банкетка Георг" title="Банкетка Георг" />
-                                    </a>
+                                    @endif
+                                    @endforeach
                                 </div>
                                 <div class="verticalMiddle"></div>
                             </div>

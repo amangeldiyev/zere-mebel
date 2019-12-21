@@ -34,8 +34,4 @@ class Product extends Model
     public function getRouteKeyName() {
         return 'slug';
     }
-
-    public function isNew() {
-        return true;
-    }
 }

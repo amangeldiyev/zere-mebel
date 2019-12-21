@@ -31,6 +31,7 @@ class HomeController extends Controller
 
         $filter = request('s');
         $selected_size = 'all';
+        $products_per_page = $filter['products_per_page'] ?? 24;
 
         if($subcategory) {
             $products = $subcategory->products();
@@ -46,7 +47,7 @@ class HomeController extends Controller
             $products->where('price', '>', $filter['price']['min'])->where('price', '<', $filter['price']['max']);
         }
 
-        if($filter['size'] && $filter['size'] != 'all') {
+        if(isset($filter['size']) && $filter['size'] != 'all') {
             $products->where('size', $filter['size']);
             $selected_size = $filter['size'];
         }
@@ -54,8 +55,8 @@ class HomeController extends Controller
         if(isset($filter['sort_by'])) {
             $products->orderByRaw($filter['sort_by']);
         }
-
-        $products = $products->get();
+// dd($products->get()->toArray());
+        $products = $products->paginate($products_per_page);
 
         $sizes = Product::distinct('size')->get()->pluck('size');
         
