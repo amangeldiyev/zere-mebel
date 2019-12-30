@@ -110,7 +110,9 @@
     </style>
     <link rel="stylesheet" type="text/css" href="/css/theme.less.css">
     <link rel="stylesheet" href="/css/theme.scss.css">
+    <link rel="stylesheet" type="text/css" href="/css/pages.additional.1.0.css">
 
+    @stack('additional_assets')
 </head>
 
 <body>
@@ -120,12 +122,12 @@
         <ul class="menu-top">
             <li class="opened active"><a href="/">Главная</a></li>
             <li><a href="#">Доставка и оплата</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li><a href="{{ route('contacts') }}">Контакты</a></li>
             <li><a href="#">Новости</a></li>
-            <li><a href="#">Отзывы</a></li>
-            <li><a href="#">Задать вопрос</a></li>
+            {{-- <li><a href="#">Отзывы</a></li> --}}
+            {{-- <li><a href="#">Задать вопрос</a></li> --}}
             <li><a href="#">Помощь покупателю</a></li>
-            <li><a href="#">Поиск по сайту</a></li>
+            {{-- <li><a href="#">Поиск по сайту</a></li> --}}
             <li><a href="#">Ткани</a></li>
         </ul>
     </nav>
@@ -206,16 +208,28 @@
             <div class="header-bot">
                 <div class="site-name td">
                     <a class="logo" href="/">
-                        <img src="/images/logo.png" width="" height="" alt="Интернет-магазин мебели" style="height:100px;">
+                        <img src="/images/logo-dark.png" width="" height="" alt="Интернет-магазин мебели" style="height:100px;">
                     </a>
                     <div class="name-desc-wrap"><a href="/" title="На главную страницу">Интернет-магазин мебели</a>
-                        <div class="site-descriptor"></div>
+                        <div class="site-descriptor">
+                            <div class="localcontacts__adress-social localsocialview1 localsocial24x24x1">
+                                <span class="icon voyager-boat"></span>
+                                <a class="csspatch-ignore vk" target="_blank" href="{{setting('site.vkontakte')}}"></a>
+                                <a class="csspatch-ignore fb" target="_blank" href="{{setting('site.facebook')}}"></a>
+                                <a class="csspatch-ignore tw" target="_blank" href="{{setting('site.twitter')}}"></a>
+                                <a class="csspatch-ignore inst" target="_blank" href="{{setting('site.instagram')}}"></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="site-phone td">
                     <div class="site-phone-in">
                         <div class="site-phone-number phone-block">
-                            <div><a href="tel:+7 911 941 39 50">+7 777 777 77 77</a> </div>
+                            <div>
+                                <a href="tel:+7 911 941 39 50">
+                                    <strong>{{setting('site.number')}}</strong>
+                                </a>
+                            </div>
                         </div><a href="#" class="callback">перезвонить Вам?</a>
                     </div>
                 </div>
@@ -229,12 +243,12 @@
                 <ul class="menu-bot">
                     <li><a href="">Главная</a></li>
                     <li><a href="">Доставка и оплата</a></li>
-                    <li><a href="">Контакты</a></li>
-                    <li><a href="">Новости</a></li>
-                    <li><a href="">Отзывы</a></li>
-                    <li><a href="">Задать вопрос</a></li>
-                    <li><a href="">Помощь покупателю</a></li>
-                    <li><a href="">Поиск по сайту</a></li>
+                    <li><a href="{{ route('contacts') }}">Контакты</a></li>
+                    {{-- <li><a href="">Новости</a></li> --}}
+                    {{-- <li><a href="">Отзывы</a></li> --}}
+                    {{-- <li><a href="">Задать вопрос</a></li> --}}
+                    {{-- <li><a href="">Помощь покупателю</a></li> --}}
+                    {{-- <li><a href="">Поиск по сайту</a></li> --}}
                     <li><a href="">Ткани</a></li>
                 </ul>
             </div>
@@ -263,8 +277,6 @@
             <div class="site-name-bot"><span>&copy; 2017 - 2019</span>
                 <p>ЗЕРЕ МЕБЕЛЬ</p>
             </div><br>
-            <div class="soc-ico"><a href="https://www.facebook.com/" target="blank"><img src="/images/default.png" alt="Фейсбук" /></a><a href="https://vk.com/" target="blank"><img src="/images/default.png" alt="ВКонтакте" /></a><a href="http://www.odnoklassniki.ru/" target="blank"><img src="/images/default.png" alt="Одноклассники" /></a><a href="https://twitter.com/?lang=ru" target="blank"><img src="/images/default.png" alt="Твиттер" /></a><a href="https://www.tumblr.com/" target="blank"><img src="/images/default.png" alt="Tumblr" /></a></div>
-
         </footer> <!-- .site-footer -->
     </div>
     <div class="product-includeForm">

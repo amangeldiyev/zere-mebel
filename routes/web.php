@@ -14,8 +14,11 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-Route::get('/', 'HomeController@index');
-Route::get('/product/{slug}', 'HomeController@product')->name('product');
 Route::post('/product/{id}/attribute', 'VoyagerProductsController@addAttribute')->name('attribute.add');
 Route::get('/attribute/delete/{id}', 'VoyagerProductsController@deleteAttribute')->name('attribute.delete');
+
+Route::get('/', 'HomeController@index');
+Route::get('/contacts', 'HomeController@contacts')->name('contacts');
+Route::get('/product/{slug}', 'HomeController@product')->name('product');
 Route::get('/{category}/{subcategory?}', 'HomeController@category')->name('category');
+

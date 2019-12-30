@@ -5434,7 +5434,7 @@ input.search-button {
   cursor: pointer;
   width: 152px;
   margin: 0 auto;
-  padding: 34px 168px 28px 0;
+  padding: 34px 168px 28px 10em;
   position: relative;
   font-size: 15.53px;
   z-index: 31;
@@ -6450,7 +6450,7 @@ input.search-button {
     width: 290px; }
 
   .folders-title {
-    padding: 34px 173px 28px 0; }
+    padding: 34px 173px 28px 6em; }
     .folders-title:after {
       right: 159px; }
 
@@ -6585,7 +6585,7 @@ input.search-button {
       top: 12px; }
 
   .folders-title {
-    padding: 24px 101px 17px 0; }
+    padding: 24px 101px 17px 6em; }
     .folders-title:after {
       right: 85px; } }
 

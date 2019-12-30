@@ -228,58 +228,13 @@
 
         </div>
     </main> <!-- .site-main -->
-    <div class="clear-float"></div>
-    <div class="brends-wrapper">
-        <div class="brends-title">Бренды <a class="see-all" href="internet-magazin/vendors.html">все бренды</a></div>
-        <div class="brends-body">
-            <div><a href="internet-magazin/vendor/sale-textil.html"><img src="images/default.png" title="Sale Textil" alt="Sale Textil" /></a></div>
-            <div><a href="internet-magazin/vendor/finist.html"><img src="images/default.png" title="Финист" alt="Финист" /></a></div>
-            <div><a href="internet-magazin/vendor/galeon-k.html"><img src="images/default.png" title="Галеон-К" alt="Галеон-К" /></a></div>
-            <div><a href="internet-magazin/vendor/adilet.html"><img src="images/default.png" title="Адилет" alt="Адилет" /></a></div>
-            <div><a href="internet-magazin/vendor/ekolayn.html"><img src="images/default.png" title="Эколайн" alt="Эколайн" /></a></div>
-            <div><a href="internet-magazin/vendor/domiart.html"><img src="images/default.png" title="Домиарт" alt="Домиарт" /></a></div>
-            <div><a href="internet-magazin/vendor/vip-textil.html"><img src="images/default.png" title="VIP-Textil" alt="VIP-Textil" /></a></div>
-            <div><a href="internet-magazin/vendor/artefakt.html"><img src="images/default.png" title="Артефакт" alt="Артефакт" /></a></div>
-            <div><a href="internet-magazin/vendor/arben.html"><img src="images/default.png" title="Арбен" alt="Арбен" /></a></div>
-            <div><a href="internet-magazin/vendor/egida-severozapad.html"><img src="images/default.png" title="Эгида-СевероЗапад" alt="Эгида-СевероЗапад" /></a></div>
-            <div><a href="internet-magazin/vendor/ametist.html"><img src="images/default.png" title="Аметист" alt="Аметист" /></a></div>
-            <div><a href="internet-magazin/vendor/soyuz-m.html"><img src="images/default.png" title="Союз-М" alt="Союз-М" /></a></div>
-            <div><a href="internet-magazin/vendor/lezertach.html"><img src="images/default.png" title="Лэзертач" alt="Лэзертач" /></a></div>
-            <div><a href="internet-magazin/vendor/bonlaif.html"><img src="images/default.png" title="Bonlaif" alt="Bonlaif" /></a></div>
-        </div>
-    </div>
-    <div class="clear-container"></div>
-    <div class="bottom-blocks-wrap">
-        <div class="edit-blocks-wrapper">
-            <div class="edit-block-name">Помощь покупателю</div>
-            <div class="edit-block-body-slider">
-                <div class="edit-block-body">
-                    <div class="edit-block-pic"><img src="images/default.png" alt="Помощь покупателю" /></div>
-                    <div class="edit-block-title"><a href="pomoshch-pokupatelyu/article_post/obshchiye-rekomendatsii-po-ukhodu-za-myagkoy-mebelyu.html">Общие рекомендации по уходу за мягкой мебелью</a></div>
-                    <div class="edit-block-text">
-                        <p><span style="font-family: verdana, geneva; font-size: 12pt;">Для поддержания внешнего вида Вашей мебели и продления срока её использования необходим хороший уход. Предлагаем Вам ознакомится с базовыми рекомендациями.&nbsp;</span></p>
-                    </div>
-                </div>
-                <div class="edit-block-body">
-                    <div class="edit-block-pic"><img src="images/default.png" alt="Помощь покупателю" /></div>
-                    <div class="edit-block-title"><a href="pomoshch-pokupatelyu/article_post/mekhanizmy-transformatsii.html">Механизмы трансформации мебели</a></div>
-                    <div class="edit-block-text">
-                        <p><span style="font-family: verdana, geneva; font-size: 12pt;">Механизм трансформации&nbsp;- этот критерий один из самых важных при выборе дивана или кресла-кровати. На сегодняшний день существует огромное множество различных механизмов трансформации. Некоторые из них подходят для ежедневного использования, другие же называют "гостевыми" и используют редко.</span></p>
-                    </div>
-                </div>
-                <div class="edit-block-body">
-                    <div class="edit-block-pic"><img src="images/default.png" alt="Помощь покупателю" /></div>
-                    <div class="edit-block-title"><a href="pomoshch-pokupatelyu/article_post/vybrat-tkan-dlya-myagkoy-mebeli.html">Выбрать ткань для мягкой мебели.</a></div>
-                    <div class="edit-block-text">
-                        <p align="center" style="text-align: left;"><span style="font-family: verdana, geneva; font-size: 12pt;">Какая обивка дивана практичнее?</span></p>
-                        <p><span style="font-family: verdana, geneva; font-size: 12pt;">На этот вопрос нельзя ответить однозначно, ведь каждая ткань обладает какими-то определенными качествами, нет своего рода универсальной обивки, все они отличаются по составу, внешнему виду и фактуре, поэтому обивку нужно выбирать, наиболее подходящую к вашему интерьеру и с подходящими для вас эксплуатационными свойствами.</span></p>
-                    </div>
-                </div>
-            </div>
-            <div class="clear-container"></div>
-            <div class="see-all"><a href="pomoshch-pokupatelyu.html">все</a></div>
-        </div>
-    </div>
+    
+
+    {{-- Brands Section --}}
+    {{-- @include('layouts.brands') --}}
+
+    {{-- Help Section --}}
+    {{-- @include('layouts.help') --}}
 </div>
     
 @endsection

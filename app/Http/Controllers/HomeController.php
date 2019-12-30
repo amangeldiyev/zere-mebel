@@ -55,7 +55,7 @@ class HomeController extends Controller
         if(isset($filter['sort_by'])) {
             $products->orderByRaw($filter['sort_by']);
         }
-// dd($products->get()->toArray());
+
         $products = $products->paginate($products_per_page);
 
         $sizes = Product::distinct('size')->get()->pluck('size');
@@ -68,5 +68,10 @@ class HomeController extends Controller
         $product = Product::where('slug', $slug)->with('category', 'subcategory', 'attributes')->firstOrFail();
 
         return view('product', compact('product'));
+    }
+
+    public function contacts() {
+
+        return view('contacts');
     }
 }
