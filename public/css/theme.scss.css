@@ -5508,7 +5508,7 @@ input.search-button {
     content: "";
     position: fixed;
     left: 50%;
-    margin-left: -92px;
+    margin-left: -15px;
     top: 74px;
     width: 12px;
     height: 12px;

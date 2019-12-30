@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="x-rim-auto-match" content="none">
+    <link rel="icon" href="/images/favicon-32x32.png">
 
 
     <script src="/js/jquery.min.js"></script>
