@@ -70,8 +70,18 @@ class HomeController extends Controller
         return view('product', compact('product'));
     }
 
+    public function delivery() {
+
+        return view('delivery');
+    }
+
     public function contacts() {
 
         return view('contacts');
+    }
+
+    public function brands() {
+
+        return view('brands');
     }
 }

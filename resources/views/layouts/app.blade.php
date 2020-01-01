@@ -122,14 +122,14 @@
         <div class="close-menu"></div>
         <ul class="menu-top">
             <li class="opened active"><a href="/">Главная</a></li>
-            <li><a href="#">Доставка и оплата</a></li>
+            <li><a href="{{ route('delivery') }}">Доставка и оплата</a></li>
             <li><a href="{{ route('contacts') }}">Контакты</a></li>
-            <li><a href="#">Новости</a></li>
+            {{-- <li><a href="#">Новости</a></li> --}}
             {{-- <li><a href="#">Отзывы</a></li> --}}
             {{-- <li><a href="#">Задать вопрос</a></li> --}}
-            <li><a href="#">Помощь покупателю</a></li>
+            {{-- <li><a href="#">Помощь покупателю</a></li> --}}
             {{-- <li><a href="#">Поиск по сайту</a></li> --}}
-            <li><a href="#">Ткани</a></li>
+            <li><a href="{{ route('brands') }}">Ткани</a></li>
         </ul>
     </nav>
     <div class="cart-wr-in">
@@ -243,14 +243,14 @@
             <div class="menu-bot-wrapper">
                 <ul class="menu-bot">
                     <li><a href="">Главная</a></li>
-                    <li><a href="">Доставка и оплата</a></li>
+                    <li><a href="{{ route('delivery') }}">Доставка и оплата</a></li>
                     <li><a href="{{ route('contacts') }}">Контакты</a></li>
                     {{-- <li><a href="">Новости</a></li> --}}
                     {{-- <li><a href="">Отзывы</a></li> --}}
                     {{-- <li><a href="">Задать вопрос</a></li> --}}
                     {{-- <li><a href="">Помощь покупателю</a></li> --}}
                     {{-- <li><a href="">Поиск по сайту</a></li> --}}
-                    <li><a href="">Ткани</a></li>
+                    <li><a href="{{ route('brands') }}">Ткани</a></li>
                 </ul>
             </div>
             <div class="form-bottom">
