@@ -18,13 +18,15 @@
     <div class="product-side-c">
         <div class="simple-rating">
 
-            <div class="tpl-stars tpl-active">
+            {{-- <div class="tpl-stars tpl-active">
                 <div class="tpl-rating" style="width: 0%;"></div>
-            </div><span class="rat-count">(0)</span>
+            </div>
+            <span class="rat-count">(0)</span> --}}
         </div>
         <div class="product-name">
             <a href="{{ route('product', ['product' => $product->slug]) }}">{{$product->title}}</a>
         </div>
+        <p>{{$product->desc}}</p>
 
         {{-- <div class="product-article"><span>Артикул:</span> кд-32</div> --}}
 

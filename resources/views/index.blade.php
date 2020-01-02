@@ -78,9 +78,10 @@
                                 </div>
 
 
-                                <div class="tpl-stars">
+                                {{-- <div class="tpl-stars">
                                     <div class="tpl-rating" style="width: 0%;"></div>
-                                </div><span class="rat-count">(0)</span>
+                                </div>
+                                <span class="rat-count">(0)</span> --}}
 
                                 <div class="product-name">
                                     <a href="{{ route('product', ['product' => $product->slug]) }}">
@@ -131,9 +132,10 @@
                                     <div class="verticalMiddle"></div>
                                 </div>
 
-                                <div class="tpl-stars">
+                                {{-- <div class="tpl-stars">
                                     <div class="tpl-rating" style="width: 0%;"></div>
-                                </div><span class="rat-count">(0)</span>
+                                </div>
+                                <span class="rat-count">(0)</span> --}}
 
                                 <div class="product-name">
                                     <a href="{{ route('product', ['product' => $product->slug]) }}">{{$product->title}}</a>

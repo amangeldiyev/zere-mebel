@@ -72,7 +72,7 @@
                         </div>
                     </div>
                     <div class="product-side-r">
-
+                        <p>{{$product->desc}}</p>
                         
                         <div class="form-add">
                             <div class="product-price">
@@ -80,12 +80,15 @@
                                 <div class="price-current ">
                                     <strong>{{$product->sale_price ?? $product->price}}</strong> тг. 
                                 </div>
+                                
                             </div>
                             <div class="tpl-rating-block">
-                                <div class="tpl-stars tpl-active">
+                                {{-- <div class="tpl-stars tpl-active">
                                     <div class="tpl-rating" style="width: 0%;"></div>
-                                </div><span>(0)</span>
+                                </div>
+                                <span>(0)</span> --}}
                             </div>
+                            
 
                             {{-- <div class="product-amount">
                                 <div class="amount-title">Количество:</div>
@@ -212,7 +215,7 @@
                             </div>
 
                             <div class="clear-float"></div>
-                            <div class="tpl-field  stars-wrap">
+                            {{-- <div class="tpl-field  stars-wrap">
                                 <label class="tpl-title" for="d[1]">
                                     <span class="tpl-required">*</span>
                                     Оценка:
@@ -233,7 +236,7 @@
                                 </div>
 
 
-                            </div>
+                            </div> --}}
 
                             <div class="tpl-field">
                                 <input type="submit" class="tpl-button tpl-button-big" value="Отправить" />
