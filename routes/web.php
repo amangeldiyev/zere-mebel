@@ -17,7 +17,7 @@ Route::group(['prefix' => 'admin'], function () {
 Route::post('/product/{id}/attribute', 'VoyagerProductsController@addAttribute')->name('attribute.add');
 Route::get('/attribute/delete/{id}', 'VoyagerProductsController@deleteAttribute')->name('attribute.delete');
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@index')->name('home');
 Route::get('/delivery', 'HomeController@delivery')->name('delivery');
 Route::get('/contacts', 'HomeController@contacts')->name('contacts');
 Route::get('/brands', 'HomeController@brands')->name('brands');

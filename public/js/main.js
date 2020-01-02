@@ -381,9 +381,16 @@ $(function() {
 	$('input[type=checkbox], input[type=radio], select').styler({
 		selectPlaceholder:"Все"
 	});
+	$('.closeBtnForm').on(clickStart, function(){
+		console.log('asdasd')
+		$('.product-includeForm').removeClass('active')
+		$('.product-includeForm2').removeClass('active')
+		$('html, body').removeClass('overflowHidden');
+	});
 	$.ajaxSetup({complete: function(){
 			$('input[type=checkbox], input[type=radio], select, .option-details select').styler(); 
 			$('.closeBtnForm').on(clickStart, function(){
+				console.log('asdasd')
 				$('.product-includeForm').removeClass('active')
 				$('.product-includeForm2').removeClass('active')
 				$('html, body').removeClass('overflowHidden');
