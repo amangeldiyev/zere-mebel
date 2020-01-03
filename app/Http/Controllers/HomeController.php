@@ -26,6 +26,14 @@ class HomeController extends Controller
         return view('index', compact('on_sale_products', 'new_products'));
     }
 
+    public function search() {
+
+        $search = request('search');
+
+        $products = Product::where('title', 'like', "%$search%")->orWhere('desc', 'like', "%$search%")->get();
+
+        return view('search', compact('products'));
+    }
 
     public function category(Category $category, Subcategory $subcategory = null) {
 

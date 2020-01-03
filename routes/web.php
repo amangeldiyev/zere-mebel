@@ -18,6 +18,7 @@ Route::post('/product/{id}/attribute', 'VoyagerProductsController@addAttribute')
 Route::get('/attribute/delete/{id}', 'VoyagerProductsController@deleteAttribute')->name('attribute.delete');
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/search', 'HomeController@search')->name('search');
 Route::get('/delivery', 'HomeController@delivery')->name('delivery');
 Route::get('/contacts', 'HomeController@contacts')->name('contacts');
 Route::get('/brands', 'HomeController@brands')->name('brands');

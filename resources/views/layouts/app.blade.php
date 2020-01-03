@@ -163,7 +163,10 @@
     </div>
     <div class="search-form-wrap">
         <div class="search-close"></div>
-        <form class="search-form" action="" method="get"><input type="text" class="search-text" name="search" onblur="this.value=this.value==''?'Введите ключевое слово':this.value" onfocus="this.value=this.value=='Введите ключевое слово'?'':this.value;" value="Введите ключевое слово" /><input class="search-button" type="submit" value="" /></form>
+        <form class="search-form" action="{{ route('search') }}" method="get">
+            <input type="text" class="search-text" name="search" onblur="this.value=this.value==''?'Введите ключевое слово':this.value" onfocus="this.value=this.value=='Введите ключевое слово'?'':this.value;" value="Введите ключевое слово" />
+            <input class="search-button" type="submit" value="" />
+        </form>
         <div class="clear-container"></div>
     </div>
     <div class="folders-shared">
