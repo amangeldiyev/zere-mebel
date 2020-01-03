@@ -124,43 +124,9 @@
             <li class="{{Route::currentRouteName() == 'home' ? 'opened active' : ''}}"><a href="/">Главная</a></li>
             <li class="{{Route::currentRouteName() == 'delivery' ? 'opened active' : ''}}"><a href="{{ route('delivery') }}">Доставка и оплата</a></li>
             <li class="{{Route::currentRouteName() == 'contacts' ? 'opened active' : ''}}"><a href="{{ route('contacts') }}">Контакты</a></li>
-            {{-- <li><a href="#">Новости</a></li> --}}
-            {{-- <li><a href="#">Отзывы</a></li> --}}
-            {{-- <li><a href="#">Задать вопрос</a></li> --}}
-            {{-- <li><a href="#">Помощь покупателю</a></li> --}}
-            {{-- <li><a href="#">Поиск по сайту</a></li> --}}
             <li class="{{Route::currentRouteName() == 'brands' ? 'opened active' : ''}}"><a href="{{ route('brands') }}">Ткани</a></li>
         </ul>
     </nav>
-    <div class="cart-wr-in">
-        <div class="block-body">
-            <div class="cart-icon"></div>
-            <div class="close-cart"></div>
-            <div class="shop-cart-opened"></div>
-        </div>
-    </div>
-    <div class="shop2-block login-form ">
-        <div class="block-body">
-            <div class="close-login"></div>
-            <form method="post" action="">
-                <input type="hidden" name="mode" value="login" />
-                <div class="row">
-                    <label class="field text"><input type="text" name="login" id="login" tabindex="1" value="" placeholder="Логин или e-mail" /></label>
-                </div>
-                <div class="row">
-                    <label class="field password"><input type="password" name="password" id="password" tabindex="2" value="" placeholder="Пароль" /></label>
-                </div>
-                <a class="frg_pass" href="users/forgot_password.html">Забыли пароль?</a>
-                <button type="submit" class="signin-btn" tabindex="3">Войти</button>
-                <div class="clear-container"></div>
-            </form>
-
-
-            <a class="registration" href="users/register.html" class="register">Регистрация</a>
-
-
-        </div>
-    </div>
     <div class="search-form-wrap">
         <div class="search-close"></div>
         <form class="search-form" action="{{ route('search') }}" method="get">
@@ -190,19 +156,6 @@
         <header role="banner" class="site-header">
             <div class="header-top-panel">
                 <div class="menu-icon"></div>
-                {{-- <div class="shop-cart-wr">
-                    <div class="cart-ico"></div>
-                    <div id="shop2-cart-preview">
-                        <div class="cart-wr">
-                            <div class="shop2-block cart-preview">
-                                <div class="block_title empty">
-                                    <div class="cart_amount">0</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- Cart Preview -->
-                </div> --}}
-                <!--<div class="block-title login-ico"></div>-->
                 <div class="site-search-wr">
                     <div class="search-ico"></div>
                 </div>
@@ -238,7 +191,7 @@
                     </div>
                 </div>
             </div>
-        </header> <!-- .site-header -->
+        </header>
 
         @yield('content')
 
@@ -248,11 +201,6 @@
                     <li><a href="">Главная</a></li>
                     <li><a href="{{ route('delivery') }}">Доставка и оплата</a></li>
                     <li><a href="{{ route('contacts') }}">Контакты</a></li>
-                    {{-- <li><a href="">Новости</a></li> --}}
-                    {{-- <li><a href="">Отзывы</a></li> --}}
-                    {{-- <li><a href="">Задать вопрос</a></li> --}}
-                    {{-- <li><a href="">Помощь покупателю</a></li> --}}
-                    {{-- <li><a href="">Поиск по сайту</a></li> --}}
                     <li><a href="{{ route('brands') }}">Ткани</a></li>
                 </ul>
             </div>
@@ -281,7 +229,7 @@
             <div class="site-name-bot"><span>&copy; 2017 - 2019</span>
                 <p>ЗЕРЕ МЕБЕЛЬ</p>
             </div><br>
-        </footer> <!-- .site-footer -->
+        </footer>
     </div>
     <div class="product-includeForm">
         <div class="tpl-anketa" data-api-url="" data-api-type="form">
@@ -313,6 +261,6 @@
     <script src="/js/plugin.js" charset="utf-8"></script>
     <script src="/js/main.js" charset="utf-8"></script>
 
-</body><!-- ID -->
+</body>
 
 </html>
