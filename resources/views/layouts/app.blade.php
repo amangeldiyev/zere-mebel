@@ -5,9 +5,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="robots" content="all">
-    <title>Зере Мебель - Диваны, кресла, кровати и вся нужная Вам мебель!</title>
-    <meta name="description" content="В нашем каталоге Вы найдете диваны, имеющие разнообразные модификации, механизмы трансформации и дизайн. Подобрать модели с наиболее подходящей обивкой различного типа. Кресла для отдыха и сна, кровати эконом варианта и эксклюзивные модели. Столы и стулья, кухонные уголки, шкафы, тумбы и комоды.">
-    <meta name="keywords" content="купить диван Спб, купить кресло, угловой диван, мягкая мебель СПб">
+    <title>{{setting('site.title')}}</title>
+    <meta name="description" content="{{setting('site.description')}}">
+    <meta name="keywords" content="купить диван Алмата, купить кресло, угловой диван, мягкая мебель Алмата">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="x-rim-auto-match" content="none">

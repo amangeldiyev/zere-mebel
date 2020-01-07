@@ -83,35 +83,9 @@
                                 
                             </div>
                             <div class="tpl-rating-block">
-                                {{-- <div class="tpl-stars tpl-active">
-                                    <div class="tpl-rating" style="width: 0%;"></div>
-                                </div>
-                                <span>(0)</span> --}}
+
                             </div>
-                            
-
-                            {{-- <div class="product-amount">
-                                <div class="amount-title">Количество:</div>
-                                <div class="shop2-product-amount">
-                                    <button type="button" class="amount-minus">&#8722;</button><input type="text" name="amount" data-min="1" data-multiplicity="1" maxlength="4" value="1" /><button type="button" class="amount-plus">&#43;</button>
-                                </div>
-                            </div> --}}
-
                         </div>
-
-                        {{-- <button class="shop2-product-btn type-3 buy" type="submit">
-                            <span>В Корзину</span>
-                        </button>
-
-                        <div class="buy-one-click">
-                            <a class="shop2-buy-one-click" href="../../kupit-v-odin-klik">Купить в один клик
-                                <input type="hidden" value="Банкетка Георг" name="product_name" class="productName" />
-                                <input type="hidden" value="http://panda-mebel.ru/internet-magazin/product" name="product_link" class="productLink" />
-                            </a>
-                        </div>
-                        <div class="clear-float"></div> --}}
-
-
 
                         <div class="product-details" style="border-top: 0px">
                             <table class="shop2-product-options">
