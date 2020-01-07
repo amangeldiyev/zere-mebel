@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Product;
 use App\Category;
 use App\Subcategory;
+use App\Mail\CallRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\View;
 
 class HomeController extends Controller
@@ -91,5 +93,17 @@ class HomeController extends Controller
     public function brands() {
 
         return view('brands');
+    }
+
+    public function notify() {
+
+        $number = request('d')[0];
+        $text = request('d')[1];
+
+        Mail::to(setting('site.email'))->send(new CallRequest($number, $text));
+        
+        return response()->json([
+            'result' => true
+        ]);
     }
 }

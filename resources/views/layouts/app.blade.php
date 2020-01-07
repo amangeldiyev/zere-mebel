@@ -75,6 +75,12 @@
                 "cart_image_height": 220
             }
         });
+        function closeForm() {
+            let number = $('input[name="d[0]"]')[0].value
+            if(number) {
+                location.reload()
+            } 
+        }
     </script>
     <style type="text/css">
         .product-item-thumb {
@@ -183,11 +189,21 @@
                     <div class="site-phone-in">
                         <div class="site-phone-number phone-block">
                             <div>
-                                <a href="tel:+7 911 941 39 50">
+                                <a href="{{setting('site.number')}}">
                                     <strong>{{setting('site.number')}}</strong>
                                 </a>
                             </div>
-                        </div><a href="#" class="callback">перезвонить Вам?</a>
+                        </div>
+                    </div>
+                    <div class="site-phone-whatsapp">
+                        <div class="site-phone-number phone-block">
+                            <div>
+                                <a href="#">
+                                    <strong>{{setting('site.whatsapp')}}</strong>
+                                </a>
+                            </div>
+                        </div>
+                        <a href="#" class="callback">перезвонить Вам?</a>
                     </div>
                 </div>
             </div>
@@ -232,11 +248,10 @@
         </footer>
     </div>
     <div class="product-includeForm">
-        <div class="tpl-anketa" data-api-url="" data-api-type="form">
+        <div class="tpl-anketa" data-api-url="{{ route('notify') }}" data-api-type="form">
             <div class="closeBtnForm"></div>
             <form method="post">
-                <input type="hidden" name="form_id" value="53199441">
-                <input type="hidden" name="tpl" value="db:shop2.2.25gr-buy-in-one-click.tpl">
+                @csrf
                 <div class="title">Перезвонить Вам</div>
                 <div class="tpl-field type-text field-required">
                     <div class="field-title">Телефон: <span class="field-required-mark">*</span></div>
@@ -251,7 +266,7 @@
                     </div>
                 </div>
                 <div class="tpl-field tpl-field-button">
-                    <button type="submit" class="tpl-form-button">Отправить</button>
+                    <button type="submit" class="tpl-form-button" onclick="closeForm()">Отправить</button>
                 </div>
             </form>
         </div>
