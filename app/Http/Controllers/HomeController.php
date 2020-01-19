@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Brand;
 use App\Product;
 use App\Category;
 use App\Subcategory;
@@ -92,7 +93,9 @@ class HomeController extends Controller
 
     public function brands() {
 
-        return view('brands');
+        $brands = Brand::all();
+
+        return view('brands', compact('brands'));
     }
 
     public function notify() {
