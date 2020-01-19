@@ -3,19 +3,19 @@
 @section('content')
 
 <div class="slider-top">
-    <div class="sl_iem" style="background: url(images/sl1.png) center center no-repeat; background-size: cover;">
+    <div class="sl_iem" style="background: url(/storage/settings/sl1.png) center center no-repeat; background-size: cover;">
         <div class="item_desc">
             <div class="item_title"></div>
             <div class="item_body"></div>
         </div>
     </div>
-    <div class="sl_iem" style="background: url(images/sl2.png) center center no-repeat; background-size: cover;">
+    <div class="sl_iem" style="background: url(/storage/settings/sl2.png) center center no-repeat; background-size: cover;">
         <div class="item_desc">
             <div class="item_title"></div>
             <div class="item_body"></div>
         </div>
     </div>
-    <div class="sl_iem" style="background: url(images/sl3.png) center center no-repeat; background-size: cover;">
+    <div class="sl_iem" style="background: url(/storage/settings/sl3.png) center center no-repeat; background-size: cover;">
         <div class="item_desc">
             <div class="item_title"></div>
             <div class="item_body"></div>
