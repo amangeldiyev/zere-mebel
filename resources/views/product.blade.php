@@ -112,7 +112,7 @@
             <div class="shop2-product-data" id="product_tabs">
                 <ul class="shop2-product-tabs">
                     <li class="active-tab"><a href="#shop2-tabs-2">Характеристики</a></li>
-                    <li><a href="#shop2-tabs-4">Отзывы (0)</a></li>
+                    {{-- <li><a href="#shop2-tabs-4">Отзывы (0)</a></li> --}}
                 </ul>
 
                 <div class="shop2-product-desc">

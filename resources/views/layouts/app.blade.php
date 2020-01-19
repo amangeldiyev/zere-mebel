@@ -171,7 +171,7 @@
             <div class="header-bot">
                 <div class="site-name td">
                     <a class="logo" href="/">
-                        <img src="/images/logo-new.png" width="" height="" alt="Интернет-магазин мебели" style="height:100px;">
+                        <img src="/storage/{{setting('site.logo')}}" width="" height="" alt="Интернет-магазин мебели" style="height:100px;">
                     </a>
                     <div class="name-desc-wrap"><a href="/" title="На главную страницу">Интернет-магазин мебели</a>
                         <div class="site-descriptor">
