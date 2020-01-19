@@ -20,7 +20,7 @@
         <div class="site-main__inner">
             <h1>Контакты</h1>
 
-            <div class="localcontacts">
+            <div class="localcontacts" style="width: 400px;float:left;">
                 <div class="localcontacts__top">
                     <div class="localcontacts__top-title">{{setting('site.location')}}</div>
                     <a href="tel:+7 (911) 941-39-50">{{setting('site.number')}}</a>
@@ -48,6 +48,9 @@
                     <div class="clear"></div>
                 </div>
             </div>
+            <iframe width="600" height="450" frameborder="0" style="border:0; float:right"
+                    src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJq8vFFn1ugzgRdm2YrY9mRD0&key=AIzaSyBWsxpPtRelCNDw4GUJks3F2bkL3bW3o3U" allowfullscreen></iframe>
+
 
         </div>
     </main>
