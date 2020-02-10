@@ -5,6 +5,7 @@
 /vendor
 .env
 master.zip
+vendor_old.zip
 .phpunit.result.cache
 Homestead.json
 Homestead.yaml
