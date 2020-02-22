@@ -177,9 +177,9 @@
                         <div class="site-descriptor">
                             <div class="localcontacts__adress-social localsocialview1 localsocial24x24x1">
                                 <span class="icon voyager-boat"></span>
-                                <a class="csspatch-ignore vk" target="_blank" href="{{setting('site.vkontakte')}}"></a>
-                                {{-- <a class="csspatch-ignore fb" target="_blank" href="{{setting('site.facebook')}}"></a>
-                                <a class="csspatch-ignore tw" target="_blank" href="{{setting('site.twitter')}}"></a> --}}
+                                {{-- <a class="csspatch-ignore vk" target="_blank" href="{{setting('site.vkontakte')}}"></a> --}}
+                                <a class="csspatch-ignore fb" target="_blank" href="{{setting('site.facebook')}}"></a>
+                                {{-- <a class="csspatch-ignore tw" target="_blank" href="{{setting('site.twitter')}}"></a> --}}
                                 <a class="csspatch-ignore inst" target="_blank" href="{{setting('site.instagram')}}"></a>
                             </div>
                         </div>
@@ -189,7 +189,7 @@
                     <div class="site-phone-in">
                         <div class="site-phone-number phone-block">
                             <div>
-                                <a href="{{setting('site.number')}}">
+                                <a href="tel:{{setting('site.number')}}">
                                     <strong>{{setting('site.number')}}</strong>
                                 </a>
                             </div>

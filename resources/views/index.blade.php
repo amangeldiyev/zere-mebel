@@ -207,16 +207,16 @@
                             Высокое качество товаров
                         </span>&nbsp;
                         <span style="display: inline-block; width: 10px;"> </span></p>
-                    <p><span style="font-family: verdana, geneva; font-size: 12pt;">В нашем каталоге Вы найдете <span style="color: #3366ff;"><a href="#"><span style="color: #3366ff;">диваны</span></a></span>, имеющие разнообразные модификации, механизмы трансформации и дизайн. Подобрать модели с наиболее подходящей обивкой различного типа. <span style="color: #3366ff;"><a href="internet-magazin/folder/kresla.html"><span style="color: #3366ff;">Кресла</span></a></span> для отдыха и сна, <span style="color: #3366ff;"><a href="internet-magazin/folder/krovati.html"><span style="color: #3366ff;">кровати</span></a></span> эконом варианта и эксклюзивные модели. <span style="color: #3366ff;"><a href="internet-magazin/folder/stoly-i-stulya.html"><span style="color: #3366ff;">Столы и стулья</span></a></span>, кухонные уголки, шкафы, <span style="color: #3366ff;"><a href="internet-magazin/folder/komody-i-tumby.html"><span style="color: #3366ff;">тумбы и комоды</span></a></span>.</span></p>
+                    {{-- <p><span style="font-family: verdana, geneva; font-size: 12pt;">В нашем каталоге Вы найдете <span style="color: #3366ff;"><a href="#"><span style="color: #3366ff;">диваны</span></a></span>, имеющие разнообразные модификации, механизмы трансформации и дизайн. Подобрать модели с наиболее подходящей обивкой различного типа. <span style="color: #3366ff;"><a href="internet-magazin/folder/kresla.html"><span style="color: #3366ff;">Кресла</span></a></span> для отдыха и сна, <span style="color: #3366ff;"><a href="internet-magazin/folder/krovati.html"><span style="color: #3366ff;">кровати</span></a></span> эконом варианта и эксклюзивные модели. <span style="color: #3366ff;"><a href="internet-magazin/folder/stoly-i-stulya.html"><span style="color: #3366ff;">Столы и стулья</span></a></span>, кухонные уголки, шкафы, <span style="color: #3366ff;"><a href="internet-magazin/folder/komody-i-tumby.html"><span style="color: #3366ff;">тумбы и комоды</span></a></span>.</span></p>
                     <p><span style="font-family: verdana, geneva; font-size: 12pt;">Обратите Ваше внимание, что из-за отсутствия торгового зала, мы предлагаем Вас самые низкие цены на мебель. Также мы будем рады работать &nbsp;с Вами не только продавая Вам мебель.&nbsp; За фотографии наших товаров в Вашем интерьере мы готовы предоставить Вам скидки на последующие покупки, также не оставим без внимания Ваши <span style="color: #3366ff;"><a href="otzyvy.html"><span style="color: #3366ff;">отзывы</span></a></span> на сайте с впечатлениями о нашей работе.</span></p>
-                    <p><span style="font-family: verdana, geneva; font-size: 12pt;">Если Вы дочитали до этой строчки, значит Вы действительно заинтересованный покупатель! Быстрее переходите в каталог и оформляйте заказ, а мы будем искренне рады приятному общению с Вами!&nbsp;</span></p>
+                    <p><span style="font-family: verdana, geneva; font-size: 12pt;">Если Вы дочитали до этой строчки, значит Вы действительно заинтересованный покупатель! Быстрее переходите в каталог и оформляйте заказ, а мы будем искренне рады приятному общению с Вами!&nbsp;</span></p> --}}
                 </div>
 
 
 
 
-                <div class="product-list product-list-thumbs list-thumb clear-self">
-                </div>
+                {{-- <div class="product-list product-list-thumbs list-thumb clear-self">
+                </div> --}}
 
             </div>
             <div class="shop2-main-blocks-wrapper">
